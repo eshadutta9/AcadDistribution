@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_phone_no
+    - node.type.lab
+id: node.lab.field_faculty_phone_no
+field_name: field_faculty_phone_no
+entity_type: node
+bundle: lab
+label: 'Faculty Phone No'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

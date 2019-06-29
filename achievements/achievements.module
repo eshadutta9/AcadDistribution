@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains achievements.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function achievements_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the achievements module.
+    case 'help.page.achievements':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for Achievements Placement Type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function achievements_theme() {
+  return [
+    'achievements' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,0 +1,9 @@
+uuid: f55c9d15-5ce8-4e66-9682-df8d98bd0382
+langcode: en
+status: true
+dependencies: {  }
+name: 'Offered Programs'
+vid: offered_programs
+description: ''
+hierarchy: 0
+weight: 0

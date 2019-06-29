@@ -1,0 +1,110 @@
+id: programs_offered
+label: 'Programs Offered Import'
+migration_group: default
+source:
+  plugin: csv
+  path: '/var/www/CSV/programs_offered.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  constants:
+    file_source: /var/www/programsoffered
+    file_dest1: 'public://programs_offered_courseware/'
+    file_dest2: 'public://programs_offered_lessonplan/'
+    file_dest3: 'public://programs_offered_curriculum/'
+    file_dest4: 'public://programs_offered_objectives/'
+process:
+  type:
+    plugin: default_value
+    default_value: p
+  source_path1:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: courseware
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source
+        - courseware
+  source_path2:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: lessonplan
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source
+        - lessonplan
+  source_path3:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: curriculum
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source
+        - curriculum
+  source_path4:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: objectives
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source
+        - objectives
+  title: title
+  body/value: body
+  body/format:
+    -
+      plugin: default_value
+      default_value: basic_html
+  field_course_description: descr
+  field_courseware:
+    -
+      plugin: explode
+      delimiter: '|'
+      source: courseware
+    -
+      plugin: file_import
+      source: '@source_path1'
+      destination: constants/file_dest1
+  field_lesson_plan:
+    -
+      plugin: explode
+      delimiter: '|'
+      source: lessonplan
+    -
+      plugin: file_import
+      source: '@source_path2'
+      destination: constants/file_dest2
+  field_curriculum:
+    plugin: file_import
+    source: '@source_path3'
+    destination: constants/file_dest3
+  field_objectives:
+    plugin: file_import
+    source: '@source_path4'
+    destination: constants/file_dest4
+  field_degree:
+    plugin: entity_lookup 
+    entity: taxonomy_term
+    bundle: offered_programs
+    source: programtype 
+destination:
+  plugin: 'entity:node'
+  plugin: 'entity:taxonomy_term'
+  bundle: p
+migration_dependencies: 
+  required: {  }
+  optional: {  }

@@ -1,0 +1,23 @@
+uuid: 404051f1-b4e2-4818-b895-e4bf114e7a93
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+  enforced:
+    module:
+      - placements
+id: node.field_year
+field_name: field_year
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

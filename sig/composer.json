@@ -1,0 +1,14 @@
+{
+  "name": "drupal/sig",
+  "type": "drupal-module",
+  "description": "Module for Special Interest Groups Content Type",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/sig",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/sig",
+    "source": "http://cgit.drupalcode.org/sig"
+  },
+  "require": { }
+}

@@ -1,0 +1,22 @@
+
+<?php
+/**
+* Implements hook_uninstall().
+*/
+function onlinecourse_uninstall() { //<-- replace “welcome” with your module machine name 
+ // Load services.
+ $queryFactory = \Drupal::service('entity.query');
+ $nodeStorage  = \Drupal::entityManager()->getStorage('node');
+
+ // Query all entity.
+ $query = $queryFactory->get('node')
+// <-- replace event in below line with your content type machine name
+   ->condition('type', 'online_course'); 
+ $nids = $query->execute();
+
+ // Delete entities.
+ if (!empty($nids)) {
+   $entities = $nodeStorage->loadMultiple($nids);
+   $nodeStorage->delete($entities);
+ }
+}

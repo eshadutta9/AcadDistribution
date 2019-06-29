@@ -1,0 +1,12 @@
+name: 'labmanual'
+type: module
+description: 'Module for Lab Manual Content Type'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:file
+  - drupal:path
+  - drupal:user
+  - drupal:node
+  - drupal:file
+  - drupal:menu_ui

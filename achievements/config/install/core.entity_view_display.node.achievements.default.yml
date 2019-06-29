@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.achievements.field_achievement_description
+    - field.field.node.achievements.field_achievement_type
+    - node.type.achievements
+  module:
+    - user
+  enforced:
+    module:
+      - achievements
+id: node.achievements.default
+targetEntityType: node
+bundle: achievements
+mode: default
+content:
+  field_achievement_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_achievement_type:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

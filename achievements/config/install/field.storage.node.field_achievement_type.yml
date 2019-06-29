@@ -1,0 +1,23 @@
+uuid: 01281d95-1c9e-4ada-b282-a81737d96e79
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+  enforced:
+    module:
+      - achievements
+id: node.field_achievement_type
+field_name: field_achievement_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

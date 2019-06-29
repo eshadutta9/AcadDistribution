@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lab.field_description_
+    - field.field.node.lab.field_faculty_e_mail
+    - field.field.node.lab.field_faculty_incharge
+    - field.field.node.lab.field_faculty_phone_no
+    - field.field.node.lab.field_hardware_software_details
+    - field.field.node.lab.field_location
+    - field.field.node.lab.field_programmer_name
+    - node.type.lab
+  module:
+    - entity_reference_revisions
+    - user
+id: node.lab.default
+targetEntityType: node
+bundle: lab
+mode: default
+content:
+  field_description_:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_faculty_e_mail:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_faculty_incharge:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_faculty_phone_no:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_hardware_software_details:
+    type: entity_reference_revisions_entity_view
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_programmer_name:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.corporate_advisory_board.field_company_image
+    - field.field.node.corporate_advisory_board.field_company_website
+    - field.field.node.corporate_advisory_board.field_designation
+    - field.field.node.corporate_advisory_board.field_member_image
+    - node.type.corporate_advisory_board
+  module:
+    - user
+  enforced:
+    module:
+      - corporate
+id: node.corporate_advisory_board.teaser
+targetEntityType: node
+bundle: corporate_advisory_board
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_company_image: true
+  field_company_website: true
+  field_designation: true
+  field_member_image: true
+  langcode: true

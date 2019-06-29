@@ -1,0 +1,12 @@
+uuid: a22778aa-6584-422b-932b-3c4e4f59c1b5
+langcode: en
+status: true
+dependencies: 
+  enforced:
+    module:
+      - placements
+name: year
+vid: year
+description: ''
+hierarchy: 0
+weight: 0

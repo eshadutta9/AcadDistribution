@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.achievements.field_achievement_type
+    - node.type.achievements
+  module:
+    - user
+  enforced:
+    module:
+      - achievements
+id: node.achievements.teaser
+targetEntityType: node
+bundle: achievements
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_achievement_type: true
+  langcode: true

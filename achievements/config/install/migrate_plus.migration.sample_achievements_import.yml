@@ -1,0 +1,36 @@
+uuid: 3397f245-46fb-426c-bc42-4ea803dca435
+langcode: en
+status: true
+id: sample_achievements_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: default
+label: 'Sample Achievements Import'
+source:
+  plugin: csv
+  path: /var/www/CSV/achievements_sample.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+process:
+  type:
+    plugin: default_value
+    default_value: achievements
+  title: title
+  field_achievement_description: description
+  field_achievement_type:
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      bundle: achievement
+      source: type
+destination:
+  plugin: 'entity:node'
+  bundle: achievements
+migration_dependencies: 
+  required: {  }
+  optional: {  }

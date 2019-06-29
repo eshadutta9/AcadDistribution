@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hardware_software_details
+    - node.type.lab
+    - paragraphs.paragraphs_type.hardware_and_software
+  module:
+    - entity_reference_revisions
+id: node.lab.field_hardware_software_details
+field_name: field_hardware_software_details
+entity_type: node
+bundle: lab
+label: 'Hardware Software Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hardware_and_software: hardware_and_software
+    target_bundles_drag_drop:
+      hardware_and_software:
+        enabled: true
+        weight: 3
+      r_d_projects:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,12 @@
+name: 'onlineCourse'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:text
+  - drupal:link
+  - drupal:path
+  - drupal:user
+  - drupal:node
+  - drupal:menu_ui

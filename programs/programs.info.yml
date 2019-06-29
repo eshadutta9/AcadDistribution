@@ -1,0 +1,13 @@
+name: 'programs'
+type: module
+description: 'Module for Content Type Programs Offered'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:file
+  - drupal:text
+  - drupal:user
+  - drupal:path
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:menu_ui

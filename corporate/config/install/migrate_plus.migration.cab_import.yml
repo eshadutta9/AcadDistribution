@@ -1,0 +1,69 @@
+uuid: 52455ef5-b766-4149-94d0-aa2af3ef7639
+id: cab_import
+label: cab
+migration_group: default
+source:
+  plugin: csv
+  # Full path to the file.
+  path: '/var/www/CSV/corp1.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  keys:
+    - id
+  constants:
+    file_source: /var/www/corporate
+    file_dest: 'public://member_images/'
+    file_source2: /var/www/corporate
+    file_dest2: 'public://company_images/'
+process:
+  type:
+    plugin: default_value
+    default_value: corporate_advisory_board
+  source_path:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: memberimg
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source
+        - memberimg
+  source_path2:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: companyimg
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source2
+        - companyimg
+  title: title
+  body/value: body
+  body/format:
+    -
+      plugin: default_value
+      default_value: basic_html
+  field_company_website/uri: website 
+  field_designation: designation
+  field_member_image:
+    plugin: file_import
+    source: '@source_path'
+    destination: constants/file_dest
+  field_company_image:
+    plugin: file_import
+    source: '@source_path2'
+    destination: constants/file_dest2
+destination:
+  plugin: 'entity:node'
+  bundle: corporate_advisory_board
+migration_dependencies: 
+  required: { }
+  optional: { }

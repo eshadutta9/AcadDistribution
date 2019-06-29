@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_manual
+    - node.type.lab_manual
+  module:
+    - file
+  enforced:
+    module:
+      - labmanual
+id: node.lab_manual.field_manual
+field_name: field_manual
+entity_type: node
+bundle: lab_manual
+label: Manual
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: lab_manuals
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

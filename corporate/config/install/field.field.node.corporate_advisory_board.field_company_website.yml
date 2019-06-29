@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_website
+    - node.type.corporate_advisory_board
+  module:
+    - link
+  enforced:
+    module:
+      - corporate
+id: node.corporate_advisory_board.field_company_website
+field_name: field_company_website
+entity_type: node
+bundle: corporate_advisory_board
+label: 'Company Website'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

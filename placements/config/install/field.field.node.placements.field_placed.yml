@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_placed
+    - node.type.placements
+  enforced:
+    module:
+      - placements
+id: node.placements.field_placed
+field_name: field_placed
+entity_type: node
+bundle: placements
+label: placed
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 0d465dd6-6376-449e-b185-1e75febf6c2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - sig
+id: node.field_sig_members
+field_name: field_sig_members
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

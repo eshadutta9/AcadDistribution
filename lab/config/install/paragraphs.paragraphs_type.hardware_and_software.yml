@@ -1,0 +1,9 @@
+uuid: c3df85d3-cc1d-408b-b115-17a70677f6d8
+langcode: en
+status: true
+dependencies: {  }
+id: hardware_and_software
+label: 'Hardware and Software'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

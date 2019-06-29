@@ -1,0 +1,13 @@
+name: 'placements'
+type: module
+description: 'Module for Placement Content Type'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:node
+  - drupal:text
+  - drupal:user
+  - drupal:menu_ui
+  - drupal:taxonomy
+  - drupal:options
+  - drupal:path

@@ -1,0 +1,8 @@
+
+placements.placement_controller_hello:
+  path: '/placements/hello/{name}'
+  defaults:
+    _controller: '\Drupal\placements\Controller\PlacementController::hello'
+    _title: 'placed'
+  requirements:
+    _permission: 'access content'

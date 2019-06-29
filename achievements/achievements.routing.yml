@@ -1,0 +1,8 @@
+
+achievements.achievement_controller_hello:
+  path: '/achievements/hello/{name}'
+  defaults:
+    _controller: '\Drupal\achievements\Controller\achievementController::hello'
+    _title: 'control'
+  requirements:
+    _permission: 'access content'

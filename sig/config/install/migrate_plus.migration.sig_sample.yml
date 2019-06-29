@@ -1,0 +1,40 @@
+uuid: 9dea4ec4-fb79-4a5f-a37a-a045de069432
+id: sig_sample
+label: 'SIG Sample'
+migration_group: default
+source:
+  plugin: csv
+  # Full path to the file.
+  path: '/var/www/CSV/sig_sample.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  keys:
+    - id
+process:
+  type:
+    plugin: default_value
+    default_value: special_interest_groups
+  title: title
+  field_faculty_head:
+    -
+      plugin: entity_lookup
+      entity_type: node
+      bundle: fac_page
+      source: head
+  field_sig_members:
+    -
+      plugin: explode
+      delimiter: '|'
+      source: members
+    -
+      plugin: entity_lookup
+      entity_type: node
+      bundle: fac_page
+destination:
+  plugin: 'entity:node'
+  bundle: special_interest_groups
+migration_dependencies: null

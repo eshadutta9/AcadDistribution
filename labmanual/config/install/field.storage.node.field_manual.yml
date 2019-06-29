@@ -1,0 +1,26 @@
+uuid: 9772805f-ffb2-443f-afdd-0bc6dfd48416
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+  enforced:
+    module:
+      - labmanual
+id: node.field_manual
+field_name: field_manual
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

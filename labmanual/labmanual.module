@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains labmanual.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function labmanual_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the labmanual module.
+    case 'help.page.labmanual':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for Lab Manual Content Type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function labmanual_theme() {
+  return [
+    'labmanual' => [
+      'render element' => 'children',
+    ],
+  ];
+}

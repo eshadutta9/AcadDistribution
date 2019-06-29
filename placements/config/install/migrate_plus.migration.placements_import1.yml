@@ -1,0 +1,30 @@
+uuid: 1b29566d-9275-46df-a57f-5f6595537753
+id: placements_import
+label: Import Placement Data
+migration_groups:
+  - default
+source:
+  plugin: csv
+  # Full path to the file.
+  path: '/var/www/CSV/Placements.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  keys:
+    - id
+process:
+  title: title
+  field_total_students_placed: total
+  field_year: year
+  type:
+    plugin: entity_lookup 
+    entity: taxonomy_term
+    bundle: placement_year
+    source: year 
+destination:
+  plugin: 'entity:node'
+  plugin: entity:taxonomy_term
+migration_dependencies: null

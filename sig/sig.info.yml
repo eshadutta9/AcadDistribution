@@ -1,0 +1,10 @@
+name: 'sig'
+type: module
+description: 'Module for Special Interest Groups Content Type'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:path
+  - drupal:node
+  - drupal:user
+  - drupal:menu_ui

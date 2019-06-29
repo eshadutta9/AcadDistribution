@@ -1,0 +1,8 @@
+
+programs.programs_offered_controller_hello:
+  path: '/programs/hello/{name}'
+  defaults:
+    _controller: '\Drupal\programs\Controller\ProgramsOfferedController::hello'
+    _title: 'control'
+  requirements:
+    _permission: 'access content'

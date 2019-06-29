@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lab_manual.field_description
+    - field.field.node.lab_manual.field_manual
+    - node.type.lab_manual
+  module:
+    - user
+  enforced:
+    module:
+      - labmanual
+id: node.lab_manual.teaser
+targetEntityType: node
+bundle: lab_manual
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_description: true
+  field_manual: true
+  langcode: true

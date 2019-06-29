@@ -1,0 +1,22 @@
+uuid: 10af3d6e-5dd8-4248-a517-ad48ef3d8f62
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - achievements
+id: node.field_achievement_description
+field_name: field_achievement_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

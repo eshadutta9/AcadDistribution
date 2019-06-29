@@ -1,0 +1,14 @@
+{
+  "name": "drupal/lab",
+  "type": "drupal-module",
+  "description": "Module for Lab Content Tyoe",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/lab",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/lab",
+    "source": "http://cgit.drupalcode.org/lab"
+  },
+  "require": { }
+}

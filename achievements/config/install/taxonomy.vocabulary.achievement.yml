@@ -1,0 +1,12 @@
+uuid: 67cd72f5-de5c-476a-b102-813963ef0b9f
+langcode: en
+status: true
+dependencies: 
+  enforced:
+    module:
+      - achievements
+name: Achievement
+vid: achievement
+description: 'Achieved by Staff/Students'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,12 @@
+uuid: dfa25a08-cadc-4bc6-826f-b817586af55b
+langcode: en
+status: true
+dependencies: 
+  enforced:
+    module:
+      - placements
+name: vocab
+vid: vocab
+description: ''
+hierarchy: 0
+weight: 0

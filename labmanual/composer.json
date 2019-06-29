@@ -1,0 +1,14 @@
+{
+  "name": "drupal/labmanual",
+  "type": "drupal-module",
+  "description": "Module for Lab Manual Content Type",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/labmanual",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/labmanual",
+    "source": "http://cgit.drupalcode.org/labmanual"
+  },
+  "require": { }
+}

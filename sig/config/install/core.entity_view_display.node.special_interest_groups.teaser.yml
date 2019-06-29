@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.special_interest_groups.field_faculty_head
+    - node.type.special_interest_groups
+  module:
+    - user
+  enforced:
+    module:
+      - sig
+id: node.special_interest_groups.teaser
+targetEntityType: node
+bundle: special_interest_groups
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_faculty_head: true
+  langcode: true

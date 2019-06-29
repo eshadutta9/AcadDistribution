@@ -1,0 +1,22 @@
+uuid: c30dd806-cceb-4e4a-94f5-cc06173cf69a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - sig
+id: node.field_faculty_head
+field_name: field_faculty_head
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.placements.field_total_students_placed
+    - field.field.node.placements.field_year
+    - node.type.placements
+  module:
+    - user
+  enforced:
+    module:
+      - placements
+id: node.placements.teaser
+targetEntityType: node
+bundle: placements
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    region: content
+hidden:
+  field_total_students_placed: true
+  field_year: true
+  langcode: true

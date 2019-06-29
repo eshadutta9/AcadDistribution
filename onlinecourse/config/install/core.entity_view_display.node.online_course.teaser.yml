@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.online_course.field_faculty_name
+    - field.field.node.online_course.field_offered_by
+    - node.type.online_course
+  module:
+    - user
+id: node.online_course.teaser
+targetEntityType: node
+bundle: online_course
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_faculty_name: true
+  field_offered_by: true
+  langcode: true

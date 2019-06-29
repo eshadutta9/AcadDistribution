@@ -1,0 +1,11 @@
+name: 'achievements'
+type: module
+description: 'Module for Achievements Placement Type'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:path
+  - drupal:user
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:menu_ui

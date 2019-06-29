@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.placements.body
+    - field.field.node.placements.field_new
+    - field.field.node.placements.field_placed
+    - field.field.node.placements.field_total_students_placed
+    - field.field.node.placements.field_year
+    - node.type.placements
+  module:
+    - text
+    - user
+  enforced:
+    module:
+      - placements
+id: node.placements.default
+targetEntityType: node
+bundle: placements
+mode: default
+content:
+  body:
+    weight: 105
+    label: above
+    settings: {  }
+    type: text_default
+    region: content
+  field_new:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_placed:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_total_students_placed:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_year:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
